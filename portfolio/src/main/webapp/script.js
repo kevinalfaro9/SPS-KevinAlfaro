@@ -15,14 +15,9 @@
 /**
  * Adds a random greeting to the page.
  */
-function foodGenerator() {
-  const foods =
-      ['Sushi', '¡Tacos', 'Korean BBQ', 'Burritos'];
-
-  // Pick a random greeting.
-  const food = foods[Math.floor(Math.random() * foods.length)];
-
-  // Add it to the page.
-  const foodContainer = document.getElementById('food-container');
-  foodContainer.innerText = food;
+ async function foodGenerator() {
+ const responseFromServer = await fetch('/foods');
+ const foods = await responseFromServer.json();
+ const statsListElement = document.getElementById('food-container');
+ statsListElement.innerHTML = foods[Math.floor(Math.random() * foods.length)];
 }
