@@ -13,11 +13,17 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Adds my favorite foods randomly on the page.
  */
  async function foodGenerator() {
+ // responseFromServer will catch the response from the server - in this case
+ // it will catch foods string away generated in the FoodServlet class from the doGet function. 
  const responseFromServer = await fetch('/foods');
+ // We then cast it to a JSON format so we can process it and utilize it directly on our index HTML page.
  const foods = await responseFromServer.json();
+ // We must give it an ID to hook it into our HTML file
  const statsListElement = document.getElementById('food-container');
+ // Finally, we call this final line to assign HTML to it from our foods array from our servlet
+ // class so we can display the information on the HTML page directly.
  statsListElement.innerHTML = foods[Math.floor(Math.random() * foods.length)];
 }
