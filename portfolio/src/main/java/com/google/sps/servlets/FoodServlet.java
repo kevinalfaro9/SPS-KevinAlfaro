@@ -9,7 +9,7 @@ import com.google.gson.Gson;
 
 /** Handles requests sent to the /hello URL. Try running a server and navigating to /hello! */
 @WebServlet("/foods")
-public class FoodServlet extends HttpServlet {
+public class FoodServletls extends HttpServlet {
 
     private String[] arr = {"Tacos", "Korean BBQ", "Burritos!"};
     String json = convertToJsonUsingGson(arr);
