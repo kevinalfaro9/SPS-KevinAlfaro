@@ -2,8 +2,13 @@
   margin-left: auto;
   margin-right: auto;
   width: 650px;
+  font-family: sans-serif;
 }
-
+ 
+p, li {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+ 
 #greeting-container {
   margin-top: 20px;
 }
