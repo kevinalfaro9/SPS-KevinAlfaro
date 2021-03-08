@@ -7,6 +7,14 @@
     <script src="script.js"></script>
   </head>
   <body>
+
+    <form action="/form-handler" method="POST">
+    <p>Enter some text here:</p>
+    <textarea name="text-input">hello world</textarea>
+    <br/>
+    <input type="submit" />
+    </form>
+    
     <div id="content">
       <h1>My Portfolio</h1>
  
@@ -49,9 +57,9 @@
         have a macbook with much better camera quality however I had to get a windows since 
         some classes have programs I need to run that run better on windows which is unfortunate!
       </p>
- 
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to see my favorite foods!</p>
+      
+      <p>Click <a href="/foods">here</a> to see my favorite foods on a seperate page.</p>
+      <p>Click here to see my favorite foods randomly displayed on the webpage itself!</p>
       <button onclick="foodGenerator()">Favorite Foods</button>
       <div id="food-container"></div>
     </div>
