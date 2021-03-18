@@ -12,3 +12,8 @@ p, li {
 #greeting-container {
   margin-top: 20px;
 }
+
+#contactForm {
+    display: block;
+    text-align: center;
+}
